@@ -1,11 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Test</title>
-</head>
-
-<body>
-Hello World
-</body>
-
-</html>
+<!-- Hover works until selected-->
+<nav>
+    <div onclick="helloFunction()" id="color1" class="col-xs-3">
+      <p class="a">Home</p>
+    </div>
+    <div onclick="nextFunction()" id="color2" class="col-xs-3">
+      <p class="a">About</p>
+    </div>
+    <div onclick="anotherFunction()" id="color3" class="col-xs-3">
+      <p class="a">Projects</p>
+    </div>
+    <div onclick="moreFunction()" id="color4" class="col-xs-3">
+      <p class="a">More</p>
+    </div>
+</nav>
+<div class="contents">
+  <div class="dropdown" id="hello">
+    <br>
+    <h1>Hello</h1>
+    <hr>
+    <p class="text">This is the introduction page.</p>
+  </div>
+  <div class="dropdown" id="next">
+    <br>
+    <h1>Next</h1>
+    <hr>
+    <p class="text"></p>
+  </div>
+  <div class="dropdown" id="another">
+    <br>
+    <h1>Another</h1>
+    <hr>
+    <p class="text"></p>
+  </div>
+  <div class="dropdown" id="more">
+    <br>
+    <h1>More</h1>
+    <hr>
+    <p class="text"></p>
+  </div>
+</div>
+<div onclick="aClear()" class="main">
+  <h1>This is a thing</h1>
+  <a href="#circle"><div id="circle"></div></a>
+  <!-- Add some css animations like maybe an arrow that scrolls through circles or something-->
+</div>
