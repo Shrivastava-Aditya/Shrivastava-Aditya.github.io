@@ -1,213 +1,376 @@
 <title>Aditya Shrivastava</title>
-
-<h1>This Site is still under construction</h1>
-<h3>The developer of this website is a talented but a lazy creature, but worry not since this is one of his top priority projects he will surely get it done in not time.</h3>
-<h6>Till then you can play this minigame below, to not get bored</h6>
-
-
 <style>
-    .polygon {
-  overflow: hidden;
-  width: 800px;
-  height: 400px;
+    html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Lato', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #fbfaf8;
+  color: #37383a;
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 2.5rem;
+    line-height: 1.8;
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+}
+
+#subheader {
+  font-weight: 300;
+  color: #948C57;
+  text-transform: uppercase;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+blockquote {
+  font-size: 2rem;
+  font-style: italic;
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 1400px) {
+  blockquote {
+    font-size: 3rem;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: #37383a
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #37383a
+}
+
+a:visited {
+  color: #948C57;
+}
+
+#tribute-link {
+  font-weight: 500;
+  color: #fefefe;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+#tribute-link:visited {
+  color: #fefefe;
+}
+
+#tribute-link:hover {
+  text-decoration: none;
+}
+
+#tribute-link-dash {
+  text-decoration: none;
+}
+
+#tribute-link:hover #tribute-link-dash {
+  animation-name: tribute-link-dash-move;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tribute-link-dash-move {
+    0% {
+      border-bottom: 0.4rem solid rgba(254, 254, 254, 0);
+      padding-bottom: 0.6rem;
+    }
+    100% {
+      border-bottom: 0.4rem solid rgba(254, 254, 254, 1);
+      padding-bottom: 0.6rem;
+    }
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 1rem 1rem -0.7rem rgba(55, 56, 58, 0.3);
+}
+
+/* Gallery */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 3rem;
   margin: 0 auto;
-  background: url('https://images5.alphacoders.com/445/445906.jpg');
-  background-size: cover;
-  background-position: center center;
-  cursor: url('http://findicons.com/files/icons/385/game_stars/64/mario.png')
-      32
-      32,
-    pointer;
+}
+
+@media (max-width: 400px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img-container {
   position: relative;
 }
 
-.bullet {
-  height: 70px;
-  width: 70px;
-  margin-right: 5px;
-  margin-top: 15px;
-  position: absolute;
-  top: -50%;
-  left: 0;
-  background: url('http://findicons.com/files/icons/2258/addictive_flavour/48/super_mario_rocket.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.caption{
+  padding-top: 1.2rem;
+  font-family: "Libre Baskerville", serif;
 }
 
-.polygon .bullet:hover {
-  border-radius: 0;
-  margin: 0;
-  height: 400px;
-  width: 800px;
-  z-index: 999;
-  position: absolute;
+.date-caption {
+  font-size: 1rem;
+  font-style: italic;
+  position: relative;
+  top: -1rem;
+}
+
+.name-caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  .date-caption {
+    font-size: 1.5rem;
+  }
+  
+  .name-caption {
+    font-size: 2rem;
+  }
+}
+
+/* First row columns */
+
+.column-header {
+  float: left;
+  width: 65%;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+.column-image {
+  float: left;
+  padding: 2.5%;
+  width: 35%;
+  box-sizing: border-box;
+}
+
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-header,
+  .column-image {
+    width: 100%;
+    float: none;
+  }
+  #image-div img {
+    margin: auto;
+  }
+}
+
+/* Sections */
+
+.first-row {
+  padding: 5rem 5rem 10rem 5rem;
   top: 0;
-  left: 0;
-  background: #ff0000;
-  cursor: default;
-  animation: anime1 0s !important;
-  animation: anime2 0s !important;
-  animation: anime3 0s !important;
-  animation: anime4 0s !important;
-  animation: anime5 0s !important;
-  animation: anime6 0s !important;
-  animation: anime7 0s !important;
-  animation: anime8 0s !important;
 }
 
-.polygon .bullet:hover:before {
-  content: "BAMMM!";
-  width: 600px;
-  color: #ffffff;
+.second-row {
+  color: #37383a;
+  padding: 0 5rem 4rem 5rem;
+  margin-bottom: 5rem;
 }
 
-.polygon:hover .bullet--1 {
-  animation: anime1 6s 0s linear infinite;
+.third-row {
+  background-color: #37383a;
+  color: #fefefe;
+  padding: 5rem;
+  text-align: center;
 }
 
-.polygon:hover .bullet--2 {
-  animation: anime2 4s 2s linear infinite;
+.fourth-row {
+  padding: 4rem 5rem 2rem 5rem;
+  margin-top: 4rem;
 }
 
-.polygon:hover .bullet--3 {
-  animation: anime3 3s 3s linear infinite;
+.fifth-row {
+  padding: 4rem;
+  text-align: center;
+  margin-bottom: 6rem;
 }
 
-.polygon:hover .bullet--4 {
-  animation: anime4 6s 4s linear infinite;
+.footer {
+  background-color: #37383a;
+  color: #fefefe;
+  padding: 0.2rem;
+  text-align: center;
 }
 
-.polygon:hover .bullet--5 {
-  animation: anime5 4s 5s linear infinite;
+#second-row-container {
+  margin: auto;
+  padding: 2.5%;
 }
-
-.polygon:hover .bullet--6 {
-  animation: anime2 3s 6s linear infinite;
-}
-
-.polygon:hover .bullet--7 {
-  animation: anime7 2s 8s linear infinite;
-}
-
-.polygon:hover .bullet--8 {
-  animation: anime4 5s 8s linear infinite;
-}
-
-.polygon:hover .bullet--9 {
-  animation: anime8 3s 9s linear infinite;
-}
-
-.polygon:hover .bullet--10 {
-  animation: anime6 4s 10s linear infinite;
-}
-
-@-webkit-keyframes anime1 {
-  0% {
-    top: 260px;
-    left: 110%;
-  }
-
-  100% {
-    top: 260px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime2 {
-  0% {
-    top: 50px;
-    left: 110%;
-  }
-
-  100% {
-    top: 50px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime3 {
-  0% {
-    top: 150px;
-    left: 110%;
-  }
-
-  100% {
-    top: 200px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime4 {
-  0% {
-    top: 300px;
-    left: 110%;
-  }
-
-  100% {
-    top: 200px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime5 {
-  0% {
-    top: 150px;
-    left: 110%;
-  }
-
-  100% {
-    top: 150px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime6 {
-  0% {
-    top: 50px;
-    left: 110%;
-  }
-
-  100% {
-    top: 250px;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime7 {
-  0% {
-    top: 300px;
-    left: 110%;
-  }
-
-  100% {
-    top: 0;
-    right: 110%;
-  }
-}
-
-@-webkit-keyframes anime8 {
-  0% {
-    top: 0;
-    left: 110%;
-  }
-
-  100% {
-    top: 300px;
-    right: 110%;
-  }
-}
-
 </style>
-<div class="polygon">
-  <span class="bullet bullet--1"></span>
-  <span class="bullet bullet--2"></span>
-  <span class="bullet bullet--3"></span>
-  <span class="bullet bullet--4"></span>
-  <span class="bullet bullet--5"></span>
-  <span class="bullet bullet--6"></span>
-  <span class="bullet bullet--7"></span>
-  <span class="bullet bullet--8"></span>
-  <span class="bullet bullet--9"></span>
-  <span class="bullet bullet--10"></span>
-</div>
+
+
+   <head>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Libre%20Baskerville" rel="stylesheet" type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A tribute page dedicated to Vincent Van Gogh. Created for the FreeCodeCamp's Responsive Web Design Certification.">
+      <title>Vincent Van Gogh</title>
+   </head>
+
+   <body>
+      <main id="main">
+         <section class="first-row">
+            <div class="container">
+               <div class="column-header">
+                  <h1 id="title">Vincent Van Gogh</h1>
+                  <p id="subheader">Post-Impressionist Artist</p>
+                  <article>
+                     <p>Between November of 1881 and July of 1890, Vincent van Gogh painted almost 900 paintings. Since his death, he has become one of the most famous painters in the world. Van Gogh’s paintings have captured the minds and hearts of millions of art lovers.</p>
+                  </article>
+               </div>
+               <div class="column-image">
+                  <div id="image-div">
+                     <img src="images/vangogh.jpg" alt="Portrait of Van Gogh with Grey Felt Hat, Oil painting, Winter 1887/88" width="472" height="495">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="second-row" id="tribute-info">
+            <article id="second-row-container">
+               <h2>Biography</h2>
+               <p>Vincent Van Gogh was born on 30 March 1853 in Zundert in the southern Netherlands, the son of a pastor. In 1869, he took his first job, working in the Hague branch of an international art dealing firm. He began to write to his younger brother Theo, a correspondence which continued for the rest of Van Gogh's life.</p>
+               <p>Van Gogh's job took him to London and Paris, but he was not interested in the work and was dismissed in 1876. He briefly became a teacher in England, and then, deeply interested in Christianity, a preacher in a mining community in southern Belgium.</p>
+               <p>In 1880, at the age of 27, he decided to become an artist. He moved around, teaching himself to draw and paint and receiving financial support from Theo. In 1886, Van Gogh joined Theo in Paris, and met many artists including Degas, Toulouse-Lautrec, Pissarro and Gauguin, with whom he became friends. His style changed significantly under the influence of Impressionism, becoming lighter and brighter. He painted a large number of self-portraits in this period.</p>
+               <p>In 1888, Van Gogh moved to Provence in southern France, where he painted his famous series 'Sunflowers'. He invited Gauguin to join him but they soon began to quarrel and one night, Van Gogh threatened Gauguin with a razor. Deeply remorseful he then cut off part of his own ear.</p>
+               <p>This was the first serious sign of the mental health problems that were to afflict Van Gogh for the rest of his life. He spent time in psychiatric hospitals and swung between periods of inertia, depression and incredibly concentrated artistic activity, his work reflecting the intense colours and strong light of the countryside around him.</p>
+               <p>On 27 July 1890, again suffering from depression, Van Gogh shot himself. He died two days later.</p>
+            </article>
+         </section>
+         <section class="third-row">
+            <blockquote cite="https://vangoghmuseum.nl/en/highlights/quotes">
+               <p id="quote"> “I don't know anything with certainty, but seeing the stars makes me dream.” </p>
+            </blockquote>
+            <a href="https://www.vincentvangogh.org/" target="_blank" id="tribute-link"><u id="tribute-link-dash"> Learn more about Vincent Van Gogh</u></a>
+         </section>
+         <!-- Gallery -->
+         <section class="fourth-row">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+               <figure class="img-container" id="img-div">
+                  <img class="project-image" id="image" src="images/starry-night.jpg" alt="Starry Night" />
+                  <figcaption class="caption" id="img-caption">
+                     <p class="name-caption">Starry Night</p>
+                     <p class="date-caption">1889, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+               <figure class="img-container">
+                  <img class="project-image" src="images/starry-night-over-the-Rhone.jpg" alt="Starry Night Over the Rhone" />
+                  <figcaption class="caption">
+                     <p class="name-caption">Starry Night Over the Rhone</p>
+                     <p class="date-caption">1888, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+               <figure class="img-container">
+                  <img class="project-image" src="images/irises.jpg" alt="Irises" />
+                  <figcaption class="caption">
+                     <p class="name-caption">Irises</p>
+                     <p class="date-caption">1889, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+               <figure class="img-container">
+                  <img class="project-image" src="images/Almond_Blossom.jpg" alt="Almond blossom" />
+                  <figcaption class="caption">
+                     <p class="name-caption">Almond Blossom</p>
+                     <p class="date-caption">1890, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+               <figure class="img-container">
+                  <img class="project-image" src="images/the_bedroom.jpg" alt="The Bedroom" />
+                  <figcaption class="caption">
+                     <p class="name-caption">The Bedroom</p>
+                     <p class="date-caption">1889, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+               <figure class="img-container">
+                  <img class="project-image" src="images/Wheatfield_with_a_Reaper.jpg" alt="Wheatfield with a Reaper" />
+                  <figcaption class="caption">
+                     <p class="name-caption">Wheatfield with a Reaper</p>
+                     <p class="date-caption">1889, Oil on Canvas</p>
+                  </figcaption>
+               </figure>
+            </div>
+         </section>
+         <section class="fifth-row">
+            <!-- Sources -->
+            <h2>Sources</h2>
+            <ul>
+               <li>
+                  <a href="https://www.vangoghgallery.com/painting/" target="_blank">The Van Gogh Gallery</a>
+               </li>
+               <li>
+                  <a href="https://vangoghmuseum.nl/en/vincent-van-gogh-life-and-work" target="_blank">Van Gogh Museum</a>
+               </li>
+               <li>
+                  <a href="http://www.bbc.co.uk/history/historic_figures/van_gogh_vincent.shtml" target="_blank">BBC History: Vincent Van Gogh</a>
+               </li>
+            </ul>
+         </section>
+         <section class="footer">
+            <p> Design & Development - Sabih Nawaz </p>
+         </section>
+      </main>
+   </body>
+</html>
