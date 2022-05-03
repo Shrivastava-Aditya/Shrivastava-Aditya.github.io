@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #787F73;
+    animation: spin 2s linear infinite;
+    z-index: 1001;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #A2FF60;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #F0FFE5;
+    animation: spin 1.5s linear infinite;
+}
+  
+@keyframes spin {
+    0%   { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #ecebeb;
+    z-index: 1000;
+    transform: translateX(0);
+}
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    transform: translateX(-100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader-wrapper .loader-section.section-right {
+    transform: translateX(100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader {
+    opacity: 0;  
+    transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;               
+    transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+}
+
+/* LOADING HOVERS PAGE */
+@keyframes fadeIn { 
+    from {opacity: 0;} 
+    to {opacity: 1;} 
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 2.5s;
+    animation-delay: 3s;
+}
+
+/* FLEXBOX THINGS */
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+}
+.child {
+    position: absolute;
+    display: none;
+    margin-top: 6em;
+    margin-left: -1.5em;
+}
+
+/* GENERAL PAGE STRUCTURE */
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+/* NAV BAR */
+a {
+    font: 16px 'Raleway', Helvetica, sans-serif;
+    text-decoration: none;
+    color: #787F73;
+    border-bottom: none;
+    transition: border .5s ease;
+}
+a:visited {color: #787F73;}
+a:hover {
+    color: #F5BEC1;
+   /* border-bottom: 1px solid #F0FFE5; */
+}
+a:active {
+    color: #F0FFE5;
+   /* border-bottom: 1px solid #F0FFE5; */ 
+}
+
+/* HIDING BAR */
+.hover {
+    display: inline-flex;
+}
+
+/* ELEMENTS */
+h1 {
+    font: 38.41px Playfair Display, Times New Roman, serif;
+    font-variant-ligatures: none;
+    color: #f1595f;
+    letter-spacing: .2em;
+    transition: color 0.5s ease;
+}
+h1:hover {
+    color: #bfbfbf;
+}
+
+/* TEXT ALIGNMENT */
+    .center {text-align: center;}
+    .right {text-align: right;}
+    .left {text-align: left;}
+    .justify {text-align: justify;}
+
+/* MARGINS */
+    .l25 {margin-left: 1.5em;}
+    .r25 {margin-right: 1.5em;}
+    .t25 {margin-top: 1.5em;}
+    .b25 {margin-bottom: 1.5em;}
+    .all25 {margin: 1.5em;}
+
+/* COLORS */
+    .gry {color: #888;}
+    .wht {color: #fff;}
+    .vLiteGrn {color: #F0FFE5;}
+    .forestGrn {color: #787F73;}
+    .blk {color: #d9a0a2;}
+
+/* CAPITALIZATION */
+    .uc {text-transform: uppercase;}
+    .lc {text-transform: lowercase;}
+    .sent {text-transform: capitalize;}
+
+/* DISPLAYS */
+    .block {display: block;}
+    .inline {display: inline;}
+    .inBlock {display: inline-block;}
+
+
+

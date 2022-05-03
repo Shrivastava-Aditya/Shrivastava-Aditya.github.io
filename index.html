@@ -1,293 +1,37 @@
-<title>Aditya Shrivastava</title>
-<style>
-    html {
-  font-size: 10px;
-}
-body {
-  font-family: 'Lato', "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  margin: 0;
-  background-color: #fbfaf8;
-  color: #37383a;
-}
-@media (min-width: 1400px) {
-  body {
-    font-size: 2.5rem;
-    line-height: 1.8;
-  }
-}
-h1 {
-  font-size: 6rem;
-  font-family: "Libre Baskerville", serif;
-  font-weight: bold;
-}
-#subheader {
-  font-weight: 300;
-  color: #948C57;
-  text-transform: uppercase;
-}
-@media (max-width: 400px) {
-  h1 {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1400px) {
-  h1 {
-    font-size: 7rem;
-  }
-}
-h2 {
-  font-size: 3rem;
-  font-family: "Libre Baskerville", serif;
-  text-align: center;
-  padding-bottom: 5rem;
-}
-@media (min-width: 1400px) {
-  h2 {
-    font-size: 4rem;
-  }
-}
-blockquote {
-  font-size: 2rem;
-  font-family: "Libre Baskerville", serif;
-  text-align: center;
-  margin-bottom: 5rem;
-}
-@media (min-width: 1400px) {
-  blockquote {
-    font-size: 3rem;
-  }
-}
-ul {
-  list-style: none;
-  padding-left: 0;
-  line-height: 2;
-}
-a {
-  text-decoration: none;
-  color: #37383a
-}
-a:hover {
-  text-decoration: underline;
-  color: #37383a
-}
-a:visited {
-  color: #948C57;
-}
-#tribute-link {
-  font-weight: 500;
-  color: #fefefe;
-  text-transform: uppercase;
-  line-height: 2;
-}
-#tribute-link:visited {
-  color: #fefefe;
-}
-#tribute-link:hover {
-  text-decoration: none;
-}
-#tribute-link-dash {
-  text-decoration: none;
-}
-#tribute-link:hover #tribute-link-dash {
-  animation-name: tribute-link-dash-move;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes tribute-link-dash-move {
-    0% {
-      border-bottom: 0.4rem solid rgba(254, 254, 254, 0);
-      padding-bottom: 0.6rem;
-    }
-    100% {
-      border-bottom: 0.4rem solid rgba(254, 254, 254, 1);
-      padding-bottom: 0.6rem;
-    }
-}
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  box-shadow: 0 1rem 1rem -0.7rem rgba(55, 56, 58, 0.3);
-}
-/* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 3rem;
-  margin: 0 auto;
-}
-@media (max-width: 400px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.img-container {
-  position: relative;
-}
+<!DOCTYPE html>
 
-.caption{
-  padding-top: 1.2rem;
-  font-family: "Libre Baskerville", serif;
-}
+<html>
+    <head>
+        <title>Bekah Shaffer-Home</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="keywords" content="Bekah Shaffer, home" />
+        <meta name="description" content="Bekah Shaffer's personal website" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type='text/css'>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <div class="parent">
+            <h1 class ="right uc">Aditya Raj Shrivastava</h1>
 
-.date-caption {
-  font-size: 1rem;
-  font-style: italic;
-  position: relative;
-  top: -1rem;
-}
+            <ul style="list-style-type:none"class="child hover fade-in">
+            <li class="all25"><a href="portfolio.html">who</a></li>
+              <li class="all25"><a href="portfolio.html">what</a></li>
+              <li class="all25"><a href="portfolio.html">where</a></li>
+              <li class="all25"><a href="portfolio.html">when</a></li>
+            <li class="all25"><a href="resume.html">which</a></li>
+            <li class="all25"><a href="about.html">how</a></li>
+            <li class="all25"><a href="contact.html">why</a></li>
+            </ul>
+        </div>
 
-.name-caption {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-@media (min-width: 1400px) {
-  .date-caption {
-    font-size: 1.5rem;
-  }
-
-  .name-caption {
-    font-size: 2rem;
-  }
-}
-
-/* First row columns */
-
-.column-header {
-  float: left;
-  width: 65%;
-  padding: 2.5%;
-  box-sizing: border-box;
-}
-.column-image {
-  float: left;
-  padding: 2.5%;
-  width: 35%;
-  box-sizing: border-box;
-}
-.container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 1000px) {
-  .column-header,
-  .column-image {
-    width: 100%;
-    float: none;
-  }
-  #image-div img {
-    margin: auto;
-  }
-}
-/* Sections */
-.first-row {
-  padding: 5rem 5rem 10rem 5rem;
-  top: 0;
-}
-.second-row {
-  color: #37383a;
-  padding: 0 5rem 4rem 5rem;
-  margin-bottom: 5rem;
-}
-.third-row {
-  background-color: #37383a;
-  color: #fefefe;
-  padding: 5rem;
-  text-align: center;
-}
-.fourth-row {
-  padding: 4rem 5rem 2rem 5rem;
-  margin-top: 4rem;
-}
-.fifth-row {
-  padding: 4rem;
-  text-align: center;
-  margin-bottom: 6rem;
-}
-.footer {
-  background-color: #37383a;
-  color: #fefefe;
-  padding: 0.2rem;
-  text-align: center;
-}
-#second-row-container {
-  margin: auto;
-  padding: 2.5%;
-}
-</style>
-
-   <head>
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Libre%20Baskerville" rel="stylesheet" type="text/css">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Landing page of Aditya">
-      <title>Aditya Raj Shrivastava</title>
-   </head>
-
-   <body>
-      <main id="main">
-         <section class="first-row">
-            <div class="container">
-               <div class="column-header">
-                  <h1 id="title">Aditya Raj Shrivastava</h1>
-                  <p id="subheader">Computer Science Undergraduate</p>
-                  <article>
-                     <p>Hi! I am Aditya Shrivastava, A computer science undergrad in college based in silicon valley in India. A tech enthusiast, keen learner, and a good problem solver, you can check out my contribution below.</p>
-                      <h5>CHEERS!!</h5>
-                  </article>
-               </div>
-               <div class="column-image">
-                  <div id="image-div">
-                     <img src="https://miro.medium.com/fit/c/262/262/1*tzz-qlgZBff5h-OvUjsIsg.jpeg" alt="Aditya Raj Shrivastava" width="262" height="262">
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section class="second-row" id="tribute-info">
-            <article id="second-row-container">
-               <h2>Internet Presence</h2>
-                <p style="text-align:center">Reach out to me on </p>
-                <p style="text-align:center"><a href="https://github.com/Shrivastava-Aditya">   Github  </a><a href="https://www.linkedin.com/in/aditya-raj-shrivastava-391278188/">    Linekdin    </a><a href="https://medium.com/@_aditya">  Medium  </a><a href="https://www.instagram.com/_adityashrivastava_/">   Instagram   </a> </p>
-            </article>
-         </section>
-         <section class="third-row">
-            <blockquote cite="https://vangoghmuseum.nl/en/highlights/quotes">
-               <p id="quote"> I highly believe that work is always fulfilling if it matches 3 levels of fulfilment criteria one being intrapersonal fulfilment, second is interpersonal fulfilment and contributes towards solving a problem.</p>
-                <p>But at the same time a work that is unorganised is no work at all.</p>
-            </blockquote>
-         </section>
-         <!-- Gallery -->
-         <section class="fourth-row">
-             
-            <h2>Proficient in</h2>
-            <div class="gallery-grid">
-               <figure class="img-container" id="img-div">
-                  <img class="project-image" id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png" alt="Python" />
-                  <figcaption class="caption" id="img-caption">
-<!--                      <p class="name-caption"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/></p> -->
-                  </figcaption>
-               </figure>
-               <figure class="img-container">
-                  <img class="project-image" src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" alt="Java" />
-                  <figcaption class="caption">
-<!--                      <p class="name-caption"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/></p> -->
-                   </figcaption>
-               </figure>
-               <figure class="img-container">
-                  <img class="project-image" src="https://miro.medium.com/max/5120/1*l4xICbIIYlz1OTymWCoUTw.jpeg" alt="Full Stack Suite" />
-                  <figcaption class="caption">
-<!--                     <p class="name-caption"><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/298/star_2b50.png" alt="S" width="16" height="16"/></p> -->
-                   </figcaption>
-                </figure>
-            </div>
-         </section>
-      </main>
-   </body>
+    </body>
 </html>
