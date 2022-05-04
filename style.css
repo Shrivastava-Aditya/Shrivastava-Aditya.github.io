@@ -2,7 +2,7 @@
 @media only screen and (device-width: 1280px),
 only screen and (max-width:1280px) {
 .css-element {
-yourcsscode:;
+
 }
    }
    .css-element{
@@ -127,7 +127,7 @@ display:none;
 .child {
     position: absolute;
     display: none;
-    margin-top: 10em;
+    margin-top: 8em;
     margin-left: -1.5em;
 }
 
