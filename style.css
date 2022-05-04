@@ -1,4 +1,16 @@
 @charset "UTF-8";
+@media only screen and (device-width: 1280px),
+only screen and (max-width:1280px) {
+.css-element {
+yourcsscode:;
+}
+   }
+   .css-element{
+   display:block;
+   }
+   .css-element{
+display:none;
+}
 
 #loader-wrapper {
     position: fixed;
@@ -46,9 +58,9 @@
     border-top-color: #F0FFE5;
     animation: spin 1.5s linear infinite;
 }
-  
+
 @keyframes spin {
-    0%   { 
+    0%   {
         transform: rotate(0deg);
     }
     100% {
@@ -82,19 +94,19 @@
     transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 .loaded #loader {
-    opacity: 0;  
+    opacity: 0;
     transition: all 0.3s ease-out;
 }
 .loaded #loader-wrapper {
-    visibility: hidden;               
+    visibility: hidden;
     transform: translateY(-100%);
     transition: all 0.3s 1s ease-out;
 }
 
 /* LOADING HOVERS PAGE */
-@keyframes fadeIn { 
-    from {opacity: 0;} 
-    to {opacity: 1;} 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 .fade-in {
     opacity: 0;
@@ -115,7 +127,7 @@
 .child {
     position: absolute;
     display: none;
-    margin-top: 6em;
+    margin-top: 8em;
     margin-left: -1.5em;
 }
 
@@ -140,7 +152,7 @@ a:hover {
 }
 a:active {
     color: #F0FFE5;
-   /* border-bottom: 1px solid #F0FFE5; */ 
+   /* border-bottom: 1px solid #F0FFE5; */
 }
 
 /* HIDING BAR */
@@ -189,6 +201,3 @@ h1:hover {
     .block {display: block;}
     .inline {display: inline;}
     .inBlock {display: inline-block;}
-
-
-
