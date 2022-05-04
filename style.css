@@ -2,16 +2,6 @@
 @media only screen and (device-width: 1280px),
 only screen and (max-width:1280px) {
 .css-element {
-yourcsscode:;
-}
-   }
-   .css-element{
-   display:block;
-   }
-   .css-element{
-display:none;
-}
-
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -201,3 +191,13 @@ h1:hover {
     .block {display: block;}
     .inline {display: inline;}
     .inBlock {display: inline-block;}
+}
+   }
+   .css-element{
+   display:block;
+   }
+   .css-element{
+display:none;
+}
+
+
